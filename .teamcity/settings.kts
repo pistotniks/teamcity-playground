@@ -25,12 +25,15 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 */
 
 version = "2018.1"
-
-project {
-    description = "Something"
-
-    buildType(Build)
-}
+project (Project)
+//project {
+//    uuid = "9814b870-7d53-4e11-a623-f5ee025df33a"
+//    description = "Something else"
+//
+//    buildType(Build)
+//
+//    subProjectsOrder = arrayListOf(AbsoluteId("Build"))
+//}
 
 object Build : BuildType({
     name = "Build"
