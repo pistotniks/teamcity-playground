@@ -6,6 +6,6 @@ object Project : Project ({
     //id ("RootProjectId_Teamcity_God")
     //name = "RootProjectId_Teamcity_God"
     description = "Teamcity God"
-
+    subProject(AnotherProject.Project)
     subProjectsOrder = arrayListOf(AbsoluteId("AnotherProject"))
 })

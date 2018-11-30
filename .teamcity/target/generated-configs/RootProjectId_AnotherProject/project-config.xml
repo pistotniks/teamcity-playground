@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="RootProjectId" uuid="960c326c-bf30-42ec-8429-9357908f927e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>AnotherProject</name>
+  <description>Run another project</description>
+  <parameters />
+  <cleanup />
+  <buildTypesOrder order="RootProjectId_RunBuild" />
+</project>
+

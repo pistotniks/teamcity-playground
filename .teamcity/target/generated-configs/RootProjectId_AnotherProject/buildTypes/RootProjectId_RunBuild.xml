@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d0398ad6-0fd0-4635-90a4-52a5dccbe0ad" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>RunBuild</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1" name="set version using script opa" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#!/bin/bash
+HASH=%build.vcs.number%
+SHORT_HASH=${HASH:0:7}
+BUILD_COUNTER=%build.counter%
+BUILD_NUMBER="1.0.$BUILD_COUNTER.$SHORT_HASH"
+echo "##teamcity[buildNumber '$BUILD_NUMBER']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="vcsTrigger">
+        <parameters />
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+
