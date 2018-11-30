@@ -9,8 +9,8 @@ object RunBuild : BuildType({
     name = "RunBuild"
 
     vcs {
-        //root(DslContext.settingsRoot)
-        checkoutMode = CheckoutMode.ON_SERVER
+        root(DslContext.settingsRoot)
+        //checkoutMode = CheckoutMode.ON_SERVER
     }
 
     steps {

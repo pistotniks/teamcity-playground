@@ -3,9 +3,6 @@
   <name>RunBuild</name>
   <description />
   <settings>
-    <options>
-      <option name="checkoutMode" value="ON_SERVER" />
-    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_1" name="set version using script opa" type="simpleRunner">
@@ -21,7 +18,9 @@ echo "##teamcity[buildNumber '$BUILD_NUMBER']"]]></param>
         </parameters>
       </runner>
     </build-runners>
-    <vcs-settings />
+    <vcs-settings>
+      <vcs-entry-ref root-id="SettingsRootId" />
+    </vcs-settings>
     <requirements />
     <build-triggers>
       <build-trigger id="TRIGGER_1" type="vcsTrigger">
